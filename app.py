@@ -12,7 +12,7 @@ APP_SUBTITULO    = " (PDET) y (ZOMAC)."
 
 SHEET_URL        = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTse2pfX5YzYhROoXGT1YlBGwC8Epa-IkG1vzaVckoElGOyc6MsaSVIzBqzQJHpXjrlDIz_9HSjXcyR/pub?output=csv"
 
-COLUMNAS_FILTRO  = ["SUBREGIÓN","ENTIDAD","MUNICIPIO","ZOMAC","PDET","OXI 2025","OXI 2026", "TIPOLOGIA","COMPONENTE", "FECHA DE PRESENTACION"]   # ej: ["CIUDAD", "AÑO"] — vacío = auto-detectar
+COLUMNAS_FILTRO  = ["SUBREGIÓN","ENTIDAD","MUNICIPIO","ZOMAC","PDET","OXI 2025","OXI 2026", "TIPOLOGIA","COMPONENTE", "FECHA PRESENTACION"]   # ej: ["CIUDAD", "AÑO"] — vacío = auto-detectar
 COLUMNAS_TABLA   = []   # vacío = mostrar todas
 MAX_FILTROS_AUTO = 10
 CACHE_TTL        = 60

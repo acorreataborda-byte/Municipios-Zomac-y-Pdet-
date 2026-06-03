@@ -217,7 +217,7 @@ try:
 except Exception as e:
     st.error(f" No se pudieron cargar los datos. Verifica que el Google Sheet esté publicado.\n\nError: `{e}`")
     st.stop()
-st.write(df.columns.tolist())
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  ENCABEZADO  (usa la clase .header-panel del CSS)
 # ═══════════════════════════════════════════════════════════════════════════════

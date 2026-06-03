@@ -26,32 +26,32 @@ st.set_page_config(page_title=APP_TITULO, page_icon=APP_ICONO, layout="wide")
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap');
- 
-    /* ── Fondo general: pizarra oscura con destello ámbar ──────────────────── */
+
+    /* ── Fondo general: negro OXI con destello verde ── */
     .stApp {
         background:
-            radial-gradient(ellipse at top right, rgba(245, 158, 11, 0.07), transparent 45%),
-            radial-gradient(ellipse at bottom left, rgba(30, 58, 138, 0.10), transparent 40%),
-            linear-gradient(180deg, #0f1117 0%, #131720 100%);
+            radial-gradient(ellipse at top right, rgba(0, 224, 154, 0.06), transparent 45%),
+            radial-gradient(ellipse at bottom left, rgba(29, 184, 122, 0.08), transparent 40%),
+            linear-gradient(180deg, #0a0f0a 0%, #0d140f 100%);
         font-family: 'DM Sans', sans-serif;
-        color: #e2e8f0;
+        color: #c5e8d5;
     }
- 
-    /* ── Contenedor central ─────────────────────────────────────────────────── */
+
+    /* ── Contenedor central ── */
     .block-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
         max-width: 1250px;
     }
- 
-    /* ── Panel de encabezado oscuro con borde ámbar izquierdo ──────────────── */
+
+    /* ── Panel de encabezado con borde verde menta ── */
     .header-panel {
-        background: #1a1f2e;
-        border-left: 4px solid #f59e0b;
+        background: #0f1a13;
+        border-left: 4px solid #00e09a;
         padding: 28px 36px;
         border-radius: 4px 16px 16px 4px;
-        color: #e2e8f0;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(245,158,11,0.08);
+        color: #f0faf5;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(0, 224, 154, 0.07);
         margin-bottom: 24px;
         position: relative;
         overflow: hidden;
@@ -62,7 +62,7 @@ st.markdown("""
         top: -60px; right: -60px;
         width: 220px; height: 220px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(245, 158, 11, 0.06), transparent 70%);
+        background: radial-gradient(circle, rgba(0, 224, 154, 0.05), transparent 70%);
     }
     .header-kicker {
         font-family: 'DM Mono', monospace;
@@ -70,7 +70,7 @@ st.markdown("""
         letter-spacing: 0.22em;
         font-size: 0.72rem;
         font-weight: 500;
-        color: #f59e0b;
+        color: #00e09a;
         margin-bottom: 14px;
     }
     .header-title {
@@ -78,59 +78,59 @@ st.markdown("""
         font-size: 2.4rem;
         line-height: 1.15;
         font-weight: 800;
-        color: #f1f5f9;
+        color: #f0faf5;
         margin-bottom: 10px;
     }
     .header-subtitle {
         font-size: 0.97rem;
-        color: #94a3b8;
+        color: #7ab896;
         max-width: 780px;
         line-height: 1.6;
     }
- 
-    /* ── Tarjeta de filtros: panel oscuro con borde tenue ───────────────────── */
+
+    /* ── Tarjeta de filtros ── */
     .selector-card {
-        background: #1a1f2e;
-        border: 1px solid rgba(245, 158, 11, 0.14);
+        background: #0f1a13;
+        border: 1px solid rgba(0, 224, 154, 0.14);
         border-radius: 12px;
         padding: 20px 22px 8px 22px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
         margin: 10px 0 22px 0;
     }
     .selector-title {
         font-family: 'Syne', sans-serif;
         font-size: 1rem;
         font-weight: 700;
-        color: #f59e0b;
+        color: #00e09a;
         margin-bottom: 4px;
         letter-spacing: 0.02em;
     }
     .selector-help {
         font-size: 0.88rem;
-        color: #64748b;
+        color: #3d6b52;
         margin-bottom: 14px;
     }
- 
-    /* ── Selectbox: bordes ámbar sobre fondo oscuro ─────────────────────────── */
+
+    /* ── Selectbox ── */
     div[data-baseweb="select"] > div {
-        background-color: #0f1117 !important;
+        background-color: #060d08 !important;
         border-radius: 8px !important;
-        border: 1px solid rgba(245, 158, 11, 0.25) !important;
+        border: 1px solid rgba(0, 224, 154, 0.22) !important;
         min-height: 50px !important;
         box-shadow: none !important;
-        color: #e2e8f0 !important;
+        color: #c5e8d5 !important;
     }
     div[data-baseweb="select"] > div:hover {
-        border-color: #f59e0b !important;
+        border-color: #00e09a !important;
     }
- 
-    /* ── Tarjeta principal con línea superior ámbar ─────────────────────────── */
+
+    /* ── Tarjeta principal con línea superior verde ── */
     .equipo-hero {
-        background: #1a1f2e;
+        background: #0f1a13;
         border-radius: 12px;
-        border-top: 3px solid #f59e0b;
+        border-top: 3px solid #00e09a;
         padding: 24px 28px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
         margin-bottom: 20px;
     }
     .equipo-label {
@@ -138,7 +138,7 @@ st.markdown("""
         font-size: 0.72rem;
         text-transform: uppercase;
         letter-spacing: 0.22em;
-        color: #f59e0b;
+        color: #00e09a;
         font-weight: 500;
         margin-bottom: 10px;
     }
@@ -146,29 +146,29 @@ st.markdown("""
         font-family: 'Syne', sans-serif;
         font-size: 2rem;
         font-weight: 800;
-        color: #f1f5f9;
+        color: #f0faf5;
         margin-bottom: 6px;
     }
     .equipo-caption {
         font-size: 0.92rem;
-        color: #64748b;
+        color: #3d6b52;
         max-width: 750px;
     }
- 
-    /* ── Tarjetas secundarias ───────────────────────────────────────────────── */
+
+    /* ── Tarjetas secundarias ── */
     .card {
-        background: #1a1f2e;
+        background: #0f1a13;
         padding: 18px 20px;
         border-radius: 12px;
-        border: 1px solid rgba(245, 158, 11, 0.12);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.30);
+        border: 1px solid rgba(0, 224, 154, 0.10);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.40);
         margin-bottom: 15px;
     }
     .card-title {
         font-family: 'Syne', sans-serif;
         font-weight: 700;
         font-size: 1rem;
-        color: #f59e0b;
+        color: #00e09a;
         margin-bottom: 8px;
     }
     .bullet-list {
@@ -178,45 +178,27 @@ st.markdown("""
     .bullet-list li {
         margin-bottom: 0.5rem;
         line-height: 1.6;
-        color: #94a3b8;
+        color: #7ab896;
     }
- 
-    /* ── Pestañas ────────────────────────────────────────────────────────────── */
+
+    /* ── Pestañas ── */
     .stTabs [data-baseweb="tab-list"] { gap: 6px; }
     .stTabs [data-baseweb="tab"] {
         border-radius: 6px;
         padding: 8px 18px;
-        background: #1a1f2e;
-        border: 1px solid rgba(245, 158, 11, 0.12);
-        color: #94a3b8;
+        background: #0f1a13;
+        border: 1px solid rgba(0, 224, 154, 0.12);
+        color: #7ab896;
         font-family: 'DM Mono', monospace;
         font-size: 0.85rem;
     }
     .stTabs [aria-selected="true"] {
-        background: rgba(245, 158, 11, 0.12) !important;
-        color: #f59e0b !important;
-        border-color: #f59e0b !important;
+        background: rgba(0, 224, 154, 0.10) !important;
+        color: #00e09a !important;
+        border-color: #00e09a !important;
     }
 </style>
 """, unsafe_allow_html=True)
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
-#  CARGA DE DATOS
-# ═══════════════════════════════════════════════════════════════════════════════
-
-@st.cache_data(ttl=CACHE_TTL)
-def cargar_datos(url: str) -> pd.DataFrame:
-    df = pd.read_csv(url)
-    df.columns = df.columns.str.strip()
-    df = df.dropna(how="all")
-    return df
-
-try:
-    df = cargar_datos(SHEET_URL)
-except Exception as e:
-    st.error(f" No se pudieron cargar los datos. Verifica que el Google Sheet esté publicado.\n\nError: `{e}`")
-    st.stop()
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  ENCABEZADO  (usa la clase .header-panel del CSS)

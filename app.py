@@ -199,6 +199,22 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+# ═══════════════════════════════════════════════════════════════════════════════
+#  CARGA DE DATOS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+@st.cache_data(ttl=CACHE_TTL)
+def cargar_datos(url: str) -> pd.DataFrame:
+    df = pd.read_csv(url)
+    df.columns = df.columns.str.strip()
+    df = df.dropna(how="all")
+    return df
+
+try:
+    df = cargar_datos(SHEET_URL)
+except Exception as e:
+    st.error(f" No se pudieron cargar los datos. Verifica que el Google Sheet esté publicado.\n\nError: `{e}`")
+    st.stop()
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  ENCABEZADO  (usa la clase .header-panel del CSS)

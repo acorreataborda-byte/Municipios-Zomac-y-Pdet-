@@ -5,7 +5,7 @@ import pandas as pd
 #  CONFIGURACIÓN 
 # ═══════════════════════════════════════════════════════════════════════════════
 
-APP_TITULO       = "Municipios Zomac Pdet"
+APP_TITULO       = " PROYECTOS DE OBRAS POR IMPUESTOS SECTOR SALUD "
 APP_ICONO        = "📊"
 APP_KICKER       = " Programas de Desarrollo con Enfoque Territorial  y las Zonas Más Afectadas por el Conflicto Armado "   # texto pequeño sobre el título
 APP_SUBTITULO    = " "

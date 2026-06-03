@@ -8,7 +8,7 @@ import pandas as pd
 APP_TITULO       = "Municipios Zomac Pdet"
 APP_ICONO        = "📊"
 APP_KICKER       = " Programas de Desarrollo con Enfoque Territorial  y las Zonas Más Afectadas por el Conflicto Armado "   # texto pequeño sobre el título
-APP_SUBTITULO    = " (PDET) y (ZOMAC)."
+APP_SUBTITULO    = " "
 
 SHEET_URL        = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTse2pfX5YzYhROoXGT1YlBGwC8Epa-IkG1vzaVckoElGOyc6MsaSVIzBqzQJHpXjrlDIz_9HSjXcyR/pub?output=csv"
 

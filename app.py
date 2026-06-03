@@ -10,7 +10,7 @@ APP_ICONO        = "📊"
 APP_KICKER       = " Programas de Desarrollo con Enfoque Territorial  y las Zonas Más Afectadas por el Conflicto Armado "   # texto pequeño sobre el título
 APP_SUBTITULO    = " (PDET) y (ZOMAC)."
 
-SHEET_URL        = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSYX3DIEkZSXHPV-3P9UudeGr0PvW-aWGAB9NTWYLYbT-Ng72j-TTexq_Qjbcdjh0SbUb4usTGkHUgm/pub?output=csv"
+SHEET_URL        = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTse2pfX5YzYhROoXGT1YlBGwC8Epa-IkG1vzaVckoElGOyc6MsaSVIzBqzQJHpXjrlDIz_9HSjXcyR/pub?output=csv"
 
 COLUMNAS_FILTRO  = ["SUBREGIÒN","ENTIDAD","MUNICIPIO","ZOMAC","PDET","OXI 2025","OXI 2026", "TIPOLOGIA","DOTACION", "FECHA DE PRESENTACION"]   # ej: ["CIUDAD", "AÑO"] — vacío = auto-detectar
 COLUMNAS_TABLA   = []   # vacío = mostrar todas

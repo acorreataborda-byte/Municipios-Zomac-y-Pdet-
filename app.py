@@ -188,20 +188,7 @@ st.markdown(
     unsafe_allow_html=True, #permite que se use el texto (HTML) y el diseño (CSS) personalizado
 )
 
-#Diseño del panel superior (verde)
-st.markdown(
-    """
-    <div class="header-panel">
-        <div class="header-kicker">Secretaría de Salud e inclusión Social de Antioquia</div>
-        <div class="header-title">Guía Interactiva de Especificaciones Técnicas de Equipos Biomédicos</div>
-        <div class="header-subtitle">
-            Consulta para revisar la información técnica, operativa y normativa
-            de dispositivos biomédicos desde una sola interfaz.
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  CARGA DE DATOS
 # ═══════════════════════════════════════════════════════════════════════════════
